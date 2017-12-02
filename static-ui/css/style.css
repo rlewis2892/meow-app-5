@@ -1,0 +1,36 @@
+/***
+* Flexbox Sticky Footer
+* http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+***/
+
+/*corrects IE min-height bug*/
+html { display: flex;}
+body { width: 100%;}
+
+.sfooter {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.sfooter-content {
+	flex: 1 0 auto;
+}
+
+/***
+* Utilities
+***/
+.mh-80 {
+	min-height: 80vh;
+}
+
+body {
+	background: url("../img/meow-app.jpg") no-repeat 40% center;
+	background-attachment: fixed;
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		background-position-x: center;
+	}
+}

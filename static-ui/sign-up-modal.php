@@ -1,7 +1,18 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: rochelle
- * Date: 11/30/17
- * Time: 5:50 PM
- */
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				form here
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -3,6 +3,7 @@ import {RouterModule, Routes} from "@angular/router";
 
 // import components
 import {HomeComponent} from "./components/home.component";
+import {MisquoteComponent} from "./components/misquote.component";
 import {MisquoteListComponent} from "./components/misquote.list.component";
 
 // import services
@@ -14,10 +15,11 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {DeepDiveInterceptor} from "./services/deep.dive.interceptor";
 
 // array of components to be passed off to the module
-export const allAppComponents = [HomeComponent, MisquoteListComponent];
+export const allAppComponents = [HomeComponent, MisquoteComponent, MisquoteListComponent];
 
 // setup routes
 export const routes: Routes = [
+	{path: "misquote/:misquoteId", component: MisquoteComponent},
 	{path: "misquotes", component: MisquoteListComponent},
 	{path: "", component: HomeComponent},
 	{path: "**", redirectTo: ""}

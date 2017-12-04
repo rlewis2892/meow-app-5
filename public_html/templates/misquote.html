@@ -1,1 +1,11 @@
-<h1>Misquote Component</h1>
+<main class="container">
+	<h2>Misquote {{ misquote.misquoteId }}</h2>
+	<blockquote>
+		<footer class="blockquote-footer">
+			<p>{{ misquote.misquote }}</p>
+			<small class="text-muted">
+				{{ misquote.attribution }} submitted by <cite [title]="misquote.submitter">{{ misquote.submitter }}</cite>
+			</small>
+		</footer>
+	</blockquote>
+</main>

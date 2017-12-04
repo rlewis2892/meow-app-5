@@ -5,6 +5,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./components/home.component";
 
 // import services
+import {MisquoteService} from "./services/misquote.service";
 
 // import interceptors
 import {APP_BASE_HREF} from "@angular/common";
@@ -21,12 +22,12 @@ export const routes: Routes = [
 ];
 
 // array of services
-const services: any[] = [];
+const services: any[] = [MisquoteService];
 
 // array of providers
 const providers : any[] = [
 	{provide: APP_BASE_HREF, useValue: window["_base_href"]},
-	{provide: HTTP_INTERCEPTORS, useClass: DeepDiveInterceptor, multi: true}
+	{provide: HTTP_INTERCEPTORS, useClass: DeepDiveInterceptor, multi: true},
 ];
 
 export const appRoutingProviders: any[] = [providers, services];

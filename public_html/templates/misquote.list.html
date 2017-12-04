@@ -1,1 +1,13 @@
 <h1>All Misquotes</h1>
+<div class="card-columns">
+	<div *ngFor="let misquote of misquotes" class="card p-3">
+		<blockquote class="blockquote card-body mb-0">
+			<p class="card-text">{{ misquote.misquote }}</p>
+			<footer class="blockquote-footer">
+				<small class="text-muted">
+					{{ misquote.attribution }} submitted by <cite [title]="misquote.submitter">{{ misquote.submitter }}</cite>
+				</small>
+			</footer>
+		</blockquote>
+	</div>
+</div>
